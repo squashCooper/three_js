@@ -727,33 +727,33 @@ const water = new THREE.CylinderGeometry(waterR, waterBR, waterH, waterSeg);
     });
       
     document.addEventListener('keydown', onKeyDown, false);
-    
+     
     function onKeyDown(event) {
     
         
         const speed = 0.8; 
         switch (event.keyCode) {
             case 37: // left
-            if(man.position.x < 20 && man.position.x > -20){
+            if(man.position.x > -20){
                 man.position.x -= speed;
                 
             }
             break;
             case 38: // up
-            if(man.position.z < 19 && man.position.z > -14){
+            if( man.position.z > -14){
               man.position.z -= speed;
            
            }
            break;
             case 39: // right
-            if(man.position.x < 17 && man.position.x > -20){
+            if(man.position.x < 17){
               man.position.x += speed;
              
           }
           break;
              
             case 40: // down
-            if(man.position.z < 19){
+            if(man.position.z < 14){
                 man.position.z += speed;
               
             }
